@@ -1,0 +1,56 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="PropertyOpsWebForms.Master.SiteMaster" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>PropertyOps</title>
+    <link href="<%= ResolveClientUrl("~/Content/site.css") %>" rel="stylesheet" />
+</head>
+<body>
+<form runat="server">
+    <div class="topbar">
+        <div><b>PropertyOps</b> <span class="small">V1 (WebForms .NET 4.8)</span></div>
+        <div>
+            <asp:Label ID="lblUser" runat="server" />
+            &nbsp;
+            <asp:LinkButton ID="btnLogout" runat="server" ForeColor="White" OnClick="btnLogout_Click">Logout</asp:LinkButton>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="<%= ResolveClientUrl("~/Default.aspx") %>">Home</a>
+        <a href="<%= ResolveClientUrl("~/Finance/TransactionNew.aspx") %>">New Tx</a>
+        <a href="<%= ResolveClientUrl("~/Finance/Transactions.aspx") %>">Transactions</a>
+        
+        <a href="<%= ResolveClientUrl("~/Reports/UnitCard.aspx") %>">Kartica stana</a>
+        <a href="<%= ResolveClientUrl("~/Reports/Dashboard.aspx") %>">Dashboard</a>
+
+        <a href="<%= ResolveClientUrl("~/Associations/Associations.aspx") %>">Stambene zajednice</a>
+        <a href="<%= ResolveClientUrl("~/Associations/Charges.aspx") %>">Zaduženja</a>
+        <a href="<%= ResolveClientUrl("~/Associations/Payments.aspx") %>">Uplate</a>
+        <a href="<%= ResolveClientUrl("~/Associations/Meetings.aspx") %>">Zapisnici</a>
+
+        <a href="<%= ResolveClientUrl("~/Catalog/Entities.aspx") %>">Entiteti</a>
+        <a href="<%= ResolveClientUrl("~/Catalog/Counterparties.aspx") %>">Komitenti</a>
+        <a href="<%= ResolveClientUrl("~/Catalog/Properties.aspx") %>">Objekti</a>
+        <a href="<%= ResolveClientUrl("~/Catalog/Units.aspx") %>">Jedinice</a>
+        <a href="<%= ResolveClientUrl("~/Catalog/Categories.aspx") %>">Kategorije</a>
+
+        <a href="<%= ResolveClientUrl("~/Rent/Generate.aspx") %>">Najam obračun</a>
+        <a href="<%= ResolveClientUrl("~/Rent/Contracts.aspx") %>">Najam</a>
+        <a href="<%= ResolveClientUrl("~/Booking/Generate.aspx") %>">Booking obračun</a>
+        <a href="<%= ResolveClientUrl("~/Booking/Bookings.aspx") %>">Booking</a>
+        <a href="<%= ResolveClientUrl("~/Heating/Readings.aspx") %>">Očitavanja</a>
+        <a href="<%= ResolveClientUrl("~/Heating/Generate.aspx") %>">Grejanje obračun</a>
+        <a href="<%= ResolveClientUrl("~/Heating/Customers.aspx") %>">Grejanje</a>
+        <a href="<%= ResolveClientUrl("~/Construction/Sales.aspx") %>">Prodaje</a>
+        <a href="<%= ResolveClientUrl("~/Construction/Projects.aspx") %>">Izgradnja</a>
+        <a href="<%= ResolveClientUrl("~/NursingHome/Generate.aspx") %>">Dom obračun</a>
+        <a href="<%= ResolveClientUrl("~/NursingHome/Residents.aspx") %>">Dom</a>
+
+        <a href="<%= ResolveClientUrl("~/Admin/Users.aspx") %>">Admin</a>
+    </div>
+    <div class="container">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+</form>
+</body>
+</html>
